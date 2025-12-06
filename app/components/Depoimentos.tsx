@@ -13,38 +13,38 @@ const depoimentos = [
   },
 ]
 
-export default function TestimonialsSection() {
+export default function Depoimentos() {
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="text-center">
-          <h2 className="text-3xl md:text-4xl font-serif text-[#173F4F] text-center">
+    <section className="py-24 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-h2 font-display font-semibold text-[#173F4F] mb-6">
             quem prova, pede de novo
           </h2>
-          <p className="max-w-2xl mx-auto text-center text-slate-600 mt-4">
+          <p className="text-body text-[#3E3E3E] max-w-2xl mx-auto">
             A satisfação dos nossos clientes é o que nos move. 
             Veja o que quem já experimentou tem a dizer sobre a tovah.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {depoimentos.map((depoimento, index) => (
             <div
               key={index}
-              className="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm"
+              className="bg-white rounded-3xl border border-slate-100 shadow-card hover:shadow-hover transition-all duration-200 p-8"
             >
-              <div className="text-4xl text-[#C8A86E] mb-4">&ldquo;</div>
-              <p className="text-slate-700 leading-relaxed mb-4">
+              <div className="text-6xl text-[#C8A86E] mb-6 leading-none">&ldquo;</div>
+              <p className="text-body text-[#3E3E3E] leading-relaxed mb-6">
                 {depoimento.texto}
               </p>
-              <p className="font-semibold text-[#173F4F] mt-4">— {depoimento.autor}</p>
+              <p className="font-semibold text-[#173F4F] text-lg">— {depoimento.autor}</p>
             </div>
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <div className="inline-block bg-[#173F4F] text-white px-8 py-4 rounded-full">
-            <span className="font-serif text-lg">centenas de unidades vendidas</span>
+        <div className="text-center">
+          <div className="inline-block bg-[#173F4F] text-white px-10 py-4 rounded-full">
+            <span className="font-display text-xl">centenas de unidades vendidas</span>
           </div>
         </div>
       </div>

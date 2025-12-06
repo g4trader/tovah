@@ -25,31 +25,35 @@ const sabores = [
   },
 ]
 
-export default function SaboresSection() {
+export default function Sabores() {
   return (
-    <section id="sabores" className="py-20 bg-white">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="text-center">
-          <h2 className="text-3xl md:text-4xl font-serif text-[#173F4F] text-center">
+    <section id="sabores" className="py-24 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-h2 font-display font-semibold text-[#173F4F] mb-6">
             sabores que abraçam na primeira colherada
           </h2>
-          <p className="max-w-2xl mx-auto text-center text-slate-600 mt-4">
+          <p className="text-body text-[#3E3E3E] max-w-2xl mx-auto">
             Cada sabor foi pensado para proporcionar uma experiência única. 
             Ingredientes selecionados e receitas que valorizam o paladar.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {sabores.map((sabor, index) => (
             <div
               key={index}
-              className="bg-white border border-slate-100 rounded-2xl p-5 shadow-[0_8px_30px_rgba(15,23,42,0.04)] hover:shadow-[0_18px_40px_rgba(15,23,42,0.08)] transition-shadow"
+              className="bg-white rounded-3xl border border-slate-100 shadow-card hover:shadow-hover transition-all duration-200 p-6"
             >
-              <div className="text-[11px] uppercase tracking-[0.16em] text-[#C8A86E] mb-2">
+              <div className="text-micro uppercase tracking-widest text-[#C8A86E] mb-3 font-medium">
                 Sabor
               </div>
-              <h3 className="text-lg font-semibold text-[#173F4F]">{sabor.nome}</h3>
-              <p className="text-sm text-slate-600 mt-2">{sabor.descricao}</p>
+              <h3 className="text-h3 font-display font-semibold text-[#173F4F] mb-3">
+                {sabor.nome}
+              </h3>
+              <p className="text-body text-[#3E3E3E]/80 leading-relaxed">
+                {sabor.descricao}
+              </p>
             </div>
           ))}
         </div>

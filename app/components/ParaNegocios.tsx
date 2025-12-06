@@ -1,6 +1,6 @@
-const WHATSAPP_NUMBER = '5511999999999' // Placeholder
+const WHATSAPP_NUMBER = '5511999999999'
 
-export default function BusinessSection() {
+export default function ParaNegocios() {
   const whatsappLink = `https://wa.me/${WHATSAPP_NUMBER}`
 
   const beneficios = [
@@ -23,13 +23,13 @@ export default function BusinessSection() {
   ]
 
   return (
-    <section id="para-negocios" className="py-20 bg-[#173F4F] text-white">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-serif mb-6 text-center">
+    <section id="para-negocios" className="py-24 bg-[#173F4F] text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-h2 font-display font-semibold mb-6">
             tovah também foi feita para quem vive de vender comida
           </h2>
-          <p className="max-w-2xl mx-auto text-white/90 leading-relaxed text-center">
+          <p className="text-body-lg text-white/90 max-w-2xl mx-auto leading-relaxed">
             Se você tem um negócio de alimentação e quer oferecer algo especial aos seus clientes, 
             a tovah pode ser a escolha perfeita. Nossos bolos gelados são ideais para revenda, 
             com embalagens práticas e sabor que fideliza clientes.
@@ -40,10 +40,14 @@ export default function BusinessSection() {
           {beneficios.map((beneficio, index) => (
             <div
               key={index}
-              className="border border-white/10 rounded-2xl p-5 bg-white/5"
+              className="border border-white/10 rounded-3xl p-6 bg-white/5 backdrop-blur-sm"
             >
-              <h3 className="font-semibold text-white mb-2">{beneficio.titulo}</h3>
-              <p className="text-sm text-white/80">{beneficio.descricao}</p>
+              <h3 className="text-xl font-display font-semibold text-white mb-3">
+                {beneficio.titulo}
+              </h3>
+              <p className="text-body text-white/80 leading-relaxed">
+                {beneficio.descricao}
+              </p>
             </div>
           ))}
         </div>
@@ -53,7 +57,7 @@ export default function BusinessSection() {
             href={whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-[#C8A86E] text-[#173F4F] rounded-full px-6 py-3 font-medium hover:bg-[#B8965A] transition-all duration-200"
+            className="inline-block rounded-full px-8 py-4 bg-[#C8A86E] text-[#173F4F] text-[15px] font-semibold hover:bg-[#B8965A] transition-all duration-200 shadow-md"
           >
             Quero revender tovah
           </a>

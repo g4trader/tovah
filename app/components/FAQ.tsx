@@ -25,7 +25,7 @@ const faqs = [
   },
 ]
 
-export default function FAQSection() {
+export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   const toggleFAQ = (index: number) => {
@@ -33,10 +33,10 @@ export default function FAQSection() {
   }
 
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-2xl mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-serif text-[#173F4F] text-center">
+    <section className="py-24 bg-white">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-h2 font-display font-semibold text-[#173F4F] mb-6">
             dúvidas frequentes
           </h2>
         </div>
@@ -45,26 +45,30 @@ export default function FAQSection() {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="border-b border-slate-200 py-3"
+              className="border-b border-slate-200 last:border-b-0"
             >
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full text-left flex items-center justify-between py-2"
+                className="w-full text-left flex items-center justify-between py-6 transition-colors duration-200 hover:bg-slate-50/50 px-2 -mx-2 rounded-lg"
               >
-                <span className="text-sm md:text-base font-medium text-[#173F4F] pr-4">
+                <span className="text-body font-medium text-[#173F4F] pr-6">
                   {faq.pergunta}
                 </span>
-                <span className={`text-[#C8A86E] text-xl font-bold flex-shrink-0 transition-transform duration-200 ${
+                <span className={`text-[#C8A86E] text-2xl font-light flex-shrink-0 transition-transform duration-300 ${
                   openIndex === index ? 'rotate-45' : ''
                 }`}>
                   +
                 </span>
               </button>
-              {openIndex === index && (
-                <div className="pt-2 pb-4 text-slate-600 text-sm md:text-base leading-relaxed">
+              <div
+                className={`overflow-hidden transition-all duration-300 ${
+                  openIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                }`}
+              >
+                <div className="pb-6 pt-2 text-body text-[#3E3E3E]/80 leading-relaxed">
                   {faq.resposta}
                 </div>
-              )}
+              </div>
             </div>
           ))}
         </div>
