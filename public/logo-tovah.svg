@@ -1,7 +1,13 @@
-<svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
-  <g>
-    <circle cx="30" cy="30" r="26" stroke="#173F4F" stroke-width="4" fill="none"/>
-    <path d="M38 20c0 2-2 4-4 4h-6v18c0 9 3 16 12 16v7c-16 0-23-10-23-24v-18h-8v-5h8v-11h9v11h6c3 0 5 2 5 4z" fill="#173F4F"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="240" viewBox="0 0 800 240"
+     xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(0,0)">
+    <circle cx="120" cy="120" r="90" stroke="#173F4F" stroke-width="16" fill="none"/>
+    <path d="M140 80c0 8-6 14-14 14h-20v60c0 30 10 50 40 52v24c-54 0-78-32-78-78v-58H44v-18h24v-36h30v36h20c8 0 14 6 14 14z"
+          fill="#173F4F"/>
   </g>
-  <text x="70" y="42" font-family="serif" font-size="36" font-weight="500" fill="#173F4F">tovah</text>
+  <text x="240" y="150"
+        font-family="serif"
+        font-size="110"
+        fill="#173F4F">tovah</text>
 </svg>

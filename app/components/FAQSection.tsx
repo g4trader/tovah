@@ -33,31 +33,35 @@ export default function FAQSection() {
   }
 
   return (
-    <section className="py-20 sm:py-28 bg-white">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-petrol mb-6">
+    <section className="py-20 bg-white">
+      <div className="max-w-2xl mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-serif text-[#173F4F] text-center">
             dúvidas frequentes
           </h2>
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-0">
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="border border-cream rounded-xl overflow-hidden hover:shadow-md transition-shadow duration-300"
+              className="border-b border-slate-200 py-3"
             >
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full px-6 py-5 text-left flex items-center justify-between bg-cream/20 hover:bg-cream/30 transition-colors duration-200"
+                className="w-full text-left flex items-center justify-between py-2"
               >
-                <span className="font-semibold text-petrol text-lg">{faq.pergunta}</span>
-                <span className="text-gold text-2xl font-bold ml-4">
-                  {openIndex === index ? '−' : '+'}
+                <span className="text-sm md:text-base font-medium text-[#173F4F] pr-4">
+                  {faq.pergunta}
+                </span>
+                <span className={`text-[#C8A86E] text-xl font-bold flex-shrink-0 transition-transform duration-200 ${
+                  openIndex === index ? 'rotate-45' : ''
+                }`}>
+                  +
                 </span>
               </button>
               {openIndex === index && (
-                <div className="px-6 py-5 bg-white text-petrol/80 leading-relaxed">
+                <div className="pt-2 pb-4 text-slate-600 text-sm md:text-base leading-relaxed">
                   {faq.resposta}
                 </div>
               )}

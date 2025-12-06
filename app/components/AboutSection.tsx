@@ -1,11 +1,11 @@
 export default function AboutSection() {
   return (
-    <section id="sobre" className="py-20 sm:py-28 bg-cream/20">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-petrol mb-12 text-center">
+    <section id="sobre" className="py-20 bg-[#F4E9D7]">
+      <div className="max-w-3xl mx-auto px-4">
+        <h2 className="text-3xl md:text-4xl font-serif text-[#173F4F] mb-12 text-center">
           sobre a tovah
         </h2>
-        <div className="space-y-6 text-lg text-petrol/80 leading-relaxed">
+        <div className="space-y-6 text-base md:text-lg text-slate-700 leading-relaxed">
           <p>
             A tovah nasceu da paixão por criar algo especial, que vai além de um simples doce. 
             Acreditamos que comida feita com cuidado e ingredientes selecionados pode transformar 
@@ -26,7 +26,7 @@ export default function AboutSection() {
             ingredientes e cuidado com quem vai consumir. Cada bolo gelado que sai da nossa 
             cozinha carrega essa filosofia.
           </p>
-          <p className="font-serif text-petrol text-xl mt-8">
+          <p className="font-serif text-[#173F4F] text-xl mt-8">
             tovah — bolos gelados feitos do bem, pensados para repetir.
           </p>
         </div>

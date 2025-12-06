@@ -23,31 +23,31 @@ const passos = [
 
 export default function HowItWorksSection() {
   return (
-    <section id="como-funciona" className="py-20 sm:py-28 bg-cream/20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-petrol mb-6">
+    <section id="como-funciona" className="py-20 bg-[#F9F2E5]">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="text-center">
+          <h2 className="text-3xl md:text-4xl font-serif text-[#173F4F] text-center">
             simples de pedir, impossível de esquecer
           </h2>
-          <p className="text-lg text-petrol/80 max-w-2xl mx-auto">
+          <p className="max-w-2xl mx-auto text-center text-slate-600 mt-4">
             Nosso processo foi pensado para ser prático e rápido, 
             sem abrir mão da qualidade e do cuidado em cada etapa.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-12">
           {passos.map((passo) => (
             <div
               key={passo.numero}
-              className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300 relative"
+              className="bg-white rounded-2xl p-6 shadow-sm"
             >
-              <div className="absolute -top-4 -left-4 w-12 h-12 bg-gold rounded-full flex items-center justify-center text-white font-bold text-xl">
+              <div className="w-10 h-10 rounded-full bg-[#C8A86E] text-white flex items-center justify-center text-sm font-semibold mb-4">
                 {passo.numero}
               </div>
-              <h3 className="text-xl font-serif text-petrol mb-3 mt-4">
+              <h3 className="text-lg font-semibold text-[#173F4F] mb-2">
                 {passo.titulo}
               </h3>
-              <p className="text-petrol/70 leading-relaxed">{passo.descricao}</p>
+              <p className="text-sm text-slate-600 leading-relaxed">{passo.descricao}</p>
             </div>
           ))}
         </div>

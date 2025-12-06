@@ -9,44 +9,44 @@ export default function Footer() {
   const instagramLink = `https://instagram.com/${INSTAGRAM_HANDLE}`
 
   return (
-    <footer id="contato" className="bg-petrol text-white py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+    <footer id="contato" className="bg-[#0D2632] text-slate-100 py-10">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-8">
           {/* Logo e descrição */}
           <div className="space-y-4">
             <Image
               src="/logo-tovah.svg"
               alt="tovah"
-              width={120}
-              height={40}
+              width={200}
+              height={60}
               className="h-10 w-auto brightness-0 invert"
             />
-            <p className="text-white/80 leading-relaxed">
+            <p className="text-slate-300 leading-relaxed text-sm">
               tovah — bolos gelados feitos do bem.
             </p>
           </div>
 
           {/* Links rápidos */}
           <div>
-            <h3 className="font-serif text-xl mb-4">Links rápidos</h3>
+            <h3 className="font-serif text-lg mb-4 text-white">Links rápidos</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="#sabores" className="text-white/80 hover:text-gold transition-colors">
+                <Link href="#sabores" className="text-slate-300 hover:text-[#C8A86E] transition-colors text-sm">
                   Sabores
                 </Link>
               </li>
               <li>
-                <Link href="#como-funciona" className="text-white/80 hover:text-gold transition-colors">
+                <Link href="#como-funciona" className="text-slate-300 hover:text-[#C8A86E] transition-colors text-sm">
                   Como funciona
                 </Link>
               </li>
               <li>
-                <Link href="#para-negocios" className="text-white/80 hover:text-gold transition-colors">
+                <Link href="#para-negocios" className="text-slate-300 hover:text-[#C8A86E] transition-colors text-sm">
                   Para negócios
                 </Link>
               </li>
               <li>
-                <Link href="#sobre" className="text-white/80 hover:text-gold transition-colors">
+                <Link href="#sobre" className="text-slate-300 hover:text-[#C8A86E] transition-colors text-sm">
                   Sobre a tovah
                 </Link>
               </li>
@@ -55,14 +55,14 @@ export default function Footer() {
 
           {/* Contato */}
           <div>
-            <h3 className="font-serif text-xl mb-4">Contato</h3>
+            <h3 className="font-serif text-lg mb-4 text-white">Contato</h3>
             <ul className="space-y-3">
               <li>
                 <a
                   href={whatsappLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white/80 hover:text-gold transition-colors flex items-center"
+                  className="text-slate-300 hover:text-[#C8A86E] transition-colors flex items-center text-sm"
                 >
                   <span className="mr-2">💬</span>
                   WhatsApp
@@ -73,7 +73,7 @@ export default function Footer() {
                   href={instagramLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white/80 hover:text-gold transition-colors flex items-center"
+                  className="text-slate-300 hover:text-[#C8A86E] transition-colors flex items-center text-sm"
                 >
                   <span className="mr-2">📷</span>
                   Instagram
@@ -84,15 +84,15 @@ export default function Footer() {
         </div>
 
         {/* Linha de CNPJ/Razão Social */}
-        <div className="border-t border-white/20 pt-8 mb-8">
-          <p className="text-white/60 text-sm text-center">
+        <div className="border-t border-slate-700 pt-6 mb-4">
+          <p className="text-xs text-slate-400 text-center">
             CNPJ: 00.000.000/0001-00 | Razão Social: Tovah Bolos Gelados LTDA
           </p>
         </div>
 
         {/* Direitos autorais */}
         <div className="text-center">
-          <p className="text-white/60 text-sm">
+          <p className="text-xs text-slate-400">
             © {new Date().getFullYear()} tovah. Todos os direitos reservados.
           </p>
         </div>

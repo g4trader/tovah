@@ -1,4 +1,8 @@
-<svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
-  <text x="0" y="42" font-family="serif" font-size="36" font-weight="500" fill="#173F4F">tovah</text>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600" height="200" viewBox="0 0 600 200"
+     xmlns="http://www.w3.org/2000/svg">
+  <text x="0" y="140"
+        font-family="serif"
+        font-size="120"
+        fill="#173F4F">tovah</text>
 </svg>
-

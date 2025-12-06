@@ -30,20 +30,20 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-shadow duration-300 ${
-        scrolled ? 'bg-white shadow-md' : 'bg-white'
+      className={`sticky top-0 z-50 bg-white border-b border-slate-100 transition-shadow duration-300 ${
+        scrolled ? 'shadow-sm' : ''
       }`}
     >
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav className="max-w-6xl mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
             <Image
               src="/logo-tovah.svg"
               alt="tovah"
-              width={120}
-              height={40}
-              className="h-10 w-auto"
+              width={200}
+              height={60}
+              className="w-28 h-auto"
             />
           </Link>
 
@@ -53,7 +53,7 @@ export default function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-petrol hover:text-gold transition-colors duration-200 font-medium"
+                className="text-sm font-medium text-[#4A4A4A] hover:text-[#173F4F] transition-colors duration-200"
               >
                 {item.label}
               </Link>
@@ -65,7 +65,7 @@ export default function Header() {
             href={whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden md:inline-block bg-petrol text-white px-6 py-2.5 rounded-full hover:bg-opacity-90 transition-all duration-200 font-medium"
+            className="hidden md:inline-block rounded-full px-5 py-2 bg-[#173F4F] text-white text-sm font-medium shadow-sm hover:bg-[#102A36] transition-all duration-200"
           >
             Pedir pelo WhatsApp
           </a>
@@ -96,14 +96,14 @@ export default function Header() {
 
         {/* Menu Mobile */}
         {mobileMenuOpen && (
-          <div className="md:hidden pb-4 border-t border-cream mt-4 pt-4">
+          <div className="md:hidden pb-4 border-t border-slate-100 mt-4 pt-4">
             <div className="flex flex-col space-y-4">
               {menuItems.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="text-petrol hover:text-gold transition-colors duration-200 font-medium py-2"
+                  className="text-sm font-medium text-[#4A4A4A] hover:text-[#173F4F] transition-colors duration-200 py-2"
                 >
                   {item.label}
                 </Link>
@@ -112,7 +112,7 @@ export default function Header() {
                 href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-petrol text-white px-6 py-2.5 rounded-full hover:bg-opacity-90 transition-all duration-200 font-medium text-center mt-2"
+                className="rounded-full px-5 py-2 bg-[#173F4F] text-white text-sm font-medium shadow-sm hover:bg-[#102A36] transition-all duration-200 text-center mt-2"
               >
                 Pedir pelo WhatsApp
               </a>

@@ -27,26 +27,29 @@ const sabores = [
 
 export default function SaboresSection() {
   return (
-    <section id="sabores" className="py-20 sm:py-28 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-petrol mb-6">
+    <section id="sabores" className="py-20 bg-white">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="text-center">
+          <h2 className="text-3xl md:text-4xl font-serif text-[#173F4F] text-center">
             sabores que abraçam na primeira colherada
           </h2>
-          <p className="text-lg text-petrol/80 max-w-2xl mx-auto">
+          <p className="max-w-2xl mx-auto text-center text-slate-600 mt-4">
             Cada sabor foi pensado para proporcionar uma experiência única. 
             Ingredientes selecionados e receitas que valorizam o paladar.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
           {sabores.map((sabor, index) => (
             <div
               key={index}
-              className="bg-cream/30 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300 border border-cream"
+              className="bg-white border border-slate-100 rounded-2xl p-5 shadow-[0_8px_30px_rgba(15,23,42,0.04)] hover:shadow-[0_18px_40px_rgba(15,23,42,0.08)] transition-shadow"
             >
-              <h3 className="text-xl font-serif text-petrol mb-3">{sabor.nome}</h3>
-              <p className="text-petrol/70 leading-relaxed">{sabor.descricao}</p>
+              <div className="text-[11px] uppercase tracking-[0.16em] text-[#C8A86E] mb-2">
+                Sabor
+              </div>
+              <h3 className="text-lg font-semibold text-[#173F4F]">{sabor.nome}</h3>
+              <p className="text-sm text-slate-600 mt-2">{sabor.descricao}</p>
             </div>
           ))}
         </div>
